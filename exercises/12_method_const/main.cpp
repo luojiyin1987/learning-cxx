@@ -5,7 +5,12 @@
 struct Fibonacci {
     int numbers[11];
     // TODO: 修改方法签名和实现，使测试通过
-    int get(int i) {
+    constexpr int get(int i) const {
+        if (i < 0 || i >10) {
+            return -1;
+        } else {
+            return numbers[i];
+        }
     }
 };
 
